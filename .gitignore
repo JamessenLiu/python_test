@@ -11,3 +11,6 @@ MYVENV/*
 .idea
 .idea/
 .idea/*
+venv
+venv/
+venv/*

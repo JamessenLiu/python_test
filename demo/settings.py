@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "testdemo",
     'corsheaders',
-    'users',
-    'grpc_django',
 ]
 
 MIDDLEWARE = [
@@ -161,17 +159,4 @@ CORS_ALLOW_HEADERS = (
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 
-from grpc_django import GRPCSettings, GRPCService
-GRPC_SETTINGS = GRPCSettings(
-    services=[GRPCService(
-        # Name of the service as defined in .proto definition
-        name='UserService',
-        # The package name as defined in .proto definition (in our case it should look like `package user;`
-        package_name='user',
-        # The path (relative to `manage.py`) to the .proto definition
-        proto_path='users/user.proto',
-        # This will be the list of RPCs similar to `urls.py` definition in Django
-        rpc_conf='users.rpc'
-    )]
-)
 
