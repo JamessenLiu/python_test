@@ -38,14 +38,14 @@ services:
 #          rabbitmqctl set_permissions -p backend root ".*" ".*" ".*"&&
 #          rabbitmqctl set_permissions -p broker root ".*" ".*" ".*"&&
 #          wait
-    web:
-      container_name: python-3.6
-      build:
-        context: .
-        dockerfile: Dockerfile
-      restart: always
-      ports:
-        - "8000:8000"
+#    web:
+#      container_name: python-3.6
+#      build:
+#        context: .
+#        dockerfile: Dockerfile
+#      restart: always
+#      ports:
+#        - "8000:8000"
 #        - "8001:8001"
 #      depends_on:
 #        - db
