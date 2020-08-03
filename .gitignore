@@ -1,0 +1,13 @@
+__pycache__
+__pycache__/
+__pycache__/*
+*/__pycache__
+*/__pycache__/
+*/__pycache__/*
+*.pyc
+MYVENV
+MYVENV/
+MYVENV/*
+.idea
+.idea/
+.idea/*
