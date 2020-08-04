@@ -17,9 +17,9 @@ services:
       restart: always
       image: redis
       container_name: redis-db
-      command: redis-server --bind 0.0.0.0 --requirepass yiyidan52 -p 1201
-      ports:
-        - "1201:1201"
+      command: redis-server --bind 0.0.0.0 --requirepass yiyidan52
+      ports:docker ps
+        - "1201:6379"
 #    rabbitmq:
 #      image: rabbitmq:3.7
 #      ports:
