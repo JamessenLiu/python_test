@@ -6,4 +6,6 @@ USER root
 ADD . .
 RUN pip3 install -r requirements.txt
 
-CMD uwsgi -w demo.wsgi -s :8000 --processes=4 &
+CMD echo 'start' \
+    && uwsgi -w demo.wsgi -s :8000 --processes=4 & \
+    echo 'end'
