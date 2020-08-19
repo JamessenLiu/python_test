@@ -6,4 +6,4 @@ USER root
 ADD . .
 RUN pip3 install -r requirements.txt
 
-CMD ./start.sh
+CMD chmod 755 start.sh && ./start.sh
