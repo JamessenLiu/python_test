@@ -1,4 +1,4 @@
 #!/bin/bash
 
-uwsgi -w demo.wsgi -s :8000 --processes=4
-daphne -b 0.0.0.0 -p 8001 --proxy-headers demo.asgi:application
+uwsgi -w demo.wsgi -s :8000 --processes=4 &
+daphne -b 0.0.0.0 -p 8001 --proxy-headers demo.asgi:application &
