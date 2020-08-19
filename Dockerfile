@@ -1,4 +1,4 @@
-FROM rackspacedot/python37
+FROM python:3.6-slim-stretch
 
 WORKDIR /app
 USER root
