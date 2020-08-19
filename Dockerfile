@@ -4,6 +4,6 @@ WORKDIR /app
 USER root
 
 ADD . .
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD python3 manage.py runserver 0.0.0.0:5000
+CMD chmod 755 start.py && python3 start.py
