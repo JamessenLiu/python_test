@@ -5,5 +5,6 @@ USER root
 
 ADD . .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN chmod 755 start.py
 
-CMD chmod 755 start.py && python3 start.py
+CMD python3 start.py
