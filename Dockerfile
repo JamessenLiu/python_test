@@ -6,5 +6,5 @@ USER root
 ADD . .
 RUN pip install -r requirements.txt
 
-CMD python start.py
+CMD python manage.py runscript start
 

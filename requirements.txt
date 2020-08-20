@@ -3,3 +3,4 @@ django-cors-headers==3.3.0
 channels==2.4.0
 channels-redis==3.0.1
 uwsgi
+django_extensions==2.2.1

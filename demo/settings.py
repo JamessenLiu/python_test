@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'chat',
     'corsheaders',
     'channels',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
