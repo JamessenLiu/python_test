@@ -5,5 +5,5 @@ USER root
 ADD . .
 RUN apt-get update && apt-get install -y build-essential && apt-get install -y procps
 RUN pip install --no-cache-dir -r requirements.txt
-RUN uwsgi -w config.wsgi --http :8000 --env DJANGO_SETTINGS_MODULE=config.dev -d start \
-    && daphne -b 0.0.0.0 -p 8001 --proxy-headers config.asgi-dev:application > logs/asgi.log 2>&1 &
+RUN uwsgi -w demo.wsgi -s :8000 --processes=4 -d start \
+    && daphne -b 0.0.0.0 -p 8001 --proxy-headers demo.asgi-dev:application > logs/asgi.log 2>&1 &
