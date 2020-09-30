@@ -1,18 +1,18 @@
 version: '2'
 services:
-#    db:
-#      container_name: postgres-db
-#      image: 'postgres:11.4'
-#      environment:
-#        POSTGRES_PASSWORD: password
-#        PGDATA: /var/lib/postgresql/data/pgdata
-#        TZ: 'Asia/Shanghai'
-#      restart: always
-#      volumes:
-#        - './data.sql:/docker-entrypoint-initdb.d/init.sql'
-#        - 'postgres_data:/var/lib/postgresql/data/pgdata'
-#      ports:
-#        - "5433:5432"
+    db:
+      container_name: postgres-db
+      image: 'postgres:11.4'
+      environment:
+        POSTGRES_PASSWORD: password
+        PGDATA: /var/lib/postgresql/data/pgdata
+        TZ: 'Asia/Shanghai'
+      restart: always
+      volumes:
+        - './data.sql:/docker-entrypoint-initdb.d/init.sql'
+        - 'postgres_data:/var/lib/postgresql/data/pgdata'
+      ports:
+        - "5433:5432"
     redis:
       restart: always
       image: redis
